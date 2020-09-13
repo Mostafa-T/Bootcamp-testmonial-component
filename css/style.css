@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+/* 
+==========================
+  CSS INDEX
+==========================
+
+  -- Global style
+  -- Testmonial
+  -- Media Queries
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('../images/pattern-curve.svg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+
+/* Start Testmonial */
+
+.container {
+  position: relative;
+  padding: 0px 15px;
+  min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+
+}
+
+.testmonial {
+  min-height: 100vh;
+  max-height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-image: url('../images/pattern-bg.svg');
+  background-position: right;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.testmoinal__caption {
+  position: relative;
+  flex: 0 0 50%;
+  align-self: center;
+  justify-self: left;
+}
+.testmoinal__caption img {
+  position: absolute;
+  top: -15%;
+  left: 20%;
+
+}
+
+.testmoinal__caption p {
+  margin: 1rem 0rem;
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: hsl(240, 38%, 20%);
+}
+.testmoinal__caption #clientName {
+  font-weight: 700;
+  margin-top: 2rem;
+  color: hsl(240, 38%, 20%);
+}
+.testmoinal__caption #title {
+  color: hsl(240, 18%, 77%);
+  margin-left: 10px ;
+  font-weight: 500;
+}
+.testmoinal__image {
+  position: absolute;
+  z-index: -1;
+  right: 100px;
+  
+}
+.testmoinal__image img {
+  border-radius: 5px;
+
+}
+
+.testmonial-btns {
+  position: absolute;
+  left: 15%;
+  bottom: -20px;
+
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  z-index: 2;
+
+}
+.testmonial-btns button {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+
+/* End Testmonial */
+@media (max-width: 992px) {
+
+  body {
+    background-position: bottom left;
+  }
+  .testmonial {
+    flex-direction: column-reverse;
+    background-size: 400px;
+
+    background-position: center 150px;
+    justify-content: center;
+  }
+
+  .testmoinal__caption {
+    text-align: center;
+    margin: 4rem 1rem;
+  }
+  .testmoinal__caption p {
+    font-size: 20px;
+  }
+  
+  .testmoinal__image {
+    position: relative;
+    right: unset;
+    z-index: initial;
+    margin: 2rem 0rem;
+
+  }
+  .testmoinal__image #clientImg {
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  }
+  .testmonial-btns {
+    max-width: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    z-index: initial;
+  }
+  .testmoinal__caption span {
+    display: block;
+  }
+  .testmoinal__caption #title {
+    margin: 10px 0px;
+  }
+}
+
+
+@media (max-width: 420px) {
+
+  body {
+    background-size: 300px;
+  }
+  .testmonial {
+    flex-direction: column-reverse;
+    background-size: 400px;
+    background-position: top;
+  }
+
+  .testmoinal__caption {
+    text-align: center;
+    margin: 4rem 1rem;
+  }
+  .testmoinal__caption p {
+    font-size: 20px;
+  }
+  
+  .testmoinal__image {
+    position: relative;
+    right: unset;
+    z-index: initial;
+    margin: 2rem 0rem;
+
+  }
+  .testmoinal__image #clientImg {
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  }
+  .testmonial-btns {
+    max-width: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    z-index: initial;
+  }
+  .testmoinal__caption span {
+    display: block;
+  }
+  .testmoinal__caption #title {
+    margin: 10px 0px;
+  }
+}
+
+@media (min-width: 786px) {
+  .container {
+    width: 750px;
+
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    
+  }
+}
